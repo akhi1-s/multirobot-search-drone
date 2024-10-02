@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <node
+        name = "uncharter"
+        pkg = "move_package"
+        type = "find_frontiers.py"    
+        output = "screen"
+        args = "none"
+    >
+  </node>
+
+  <node
+        name = "uav1uncharter"
+        pkg = "move_package"
+        type = "find_frontiers.py"    
+        output = "screen"
+        args = "uav1"
+    >
+  </node>
+
+  <node
+        name = "uav2uncharter"
+        pkg = "move_package"
+        type = "find_frontiers.py"    
+        output = "screen"
+        args = "uav2"
+    >
+  </node>
+
+  <node
+        name = "explorer"
+        pkg = "move_package"
+        type = "nav_frontiers.py"    
+        output = "screen"
+    >
+  </node>
+
+  <!-- <node
+        name = "potential_field_controller"
+        pkg = "move_package"
+        type = "pot_frontiers.py"    
+        output = "screen"
+        args = "none"
+    >
+  </node> -->
+
+  <node
+        name = "uav1potential_field_controller"
+        pkg = "move_package"
+        type = "pot_frontiers.py"    
+        output = "screen"
+        args = "uav1"
+    >
+  </node>
+
+  <node
+        name = "uav2potential_field_controller"
+        pkg = "move_package"
+        type = "pot_frontiers.py"    
+        output = "screen"
+        args = "uav2"
+    >
+  </node>
+
+</launch>
